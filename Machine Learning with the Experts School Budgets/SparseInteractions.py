@@ -22,8 +22,7 @@ class SparseInteractions(BaseEstimator, TransformerMixin):
         else:
             self.orig_col_names = np.array([str(i) for i in range(X.shape[1])])
 
-        spi = self._create_sparse_interactions(X)
-        return spi
+        return self._create_sparse_interactions(X)
 
     def get_feature_names(self):
         return self.feature_names
